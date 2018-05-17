@@ -1,0 +1,22 @@
+mybatis注解：
+    传入参数：
+        使用@Param
+            @Insert("INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})")
+            int insert(@Param("name") String name, @Param("age") Integer age);
+        使用map
+            @Insert("INSERT INTO USER(NAME, AGE) VALUES(#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})")
+            int insertByMap(Map<String, Object> map);
+        使用对象
+            @Insert("INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})")
+            int insertByUser(User user);
+    返回结果：
+        @Results({
+            @Result(property = "name", column = "name"),
+            @Result(property = "age", column = "age")
+        })
+        @Select("SELECT name, age FROM user")
+        List<User> findAll();
+
+    更多：http://www.mybatis.org/mybatis-3/zh/java-api.html
+
+

@@ -1,0 +1,27 @@
+<dependency>
+    <groupId>org.apache.shiro</groupId>
+    <artifactId>shiro-core</artifactId>
+    <version>${shiro.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.shiro</groupId>
+    <artifactId>shiro-spring</artifactId>
+    <version>${shiro.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.shiro</groupId>
+    <artifactId>shiro-web</artifactId>
+    <version>${shiro.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.shiro</groupId>
+    <artifactId>shiro-ehcache</artifactId>
+    <version>${shiro.version}</version>
+</dependency>
+
+当前正在执行的subject
+ Subject subject = SecurityUtils.getSubject();
+
+获取session
+ Session session = subject.getSession();
+
